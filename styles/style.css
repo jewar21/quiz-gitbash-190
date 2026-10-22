@@ -95,7 +95,7 @@ a {
     border-top-color: var(--primary);
 
     border-radius: 50%;
-    
+
     animation: rotate 600ms infinite linear;
 }
 
@@ -103,4 +103,12 @@ a {
     to {
         transform: rotate(1turn);
     }
+}
+
+/* ESTADO DE SALIDA */
+
+.loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
