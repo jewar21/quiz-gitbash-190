@@ -1,8 +1,43 @@
+/* 1. VARIABLES Y ESTILOS GLOBALES */
+:root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --primary: #06b6d4;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --radius: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    scroll-margin-top: 5.625rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .loading {
