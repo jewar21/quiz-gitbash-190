@@ -40,31 +40,67 @@ a {
     color: inherit;
 }
 
+/* 2. PANTALLA DE CARGA */
+
+.loader {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--bg);
+    z-index: 9999;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 700ms ease,
+        visibility 700ms ease;
+}
+
 .loading {
-    max-width: 50%;
-    line-height: 1.4;
+    width: 85%;
+    max-width: 25rem;
+
+    text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
-    text-align: center;
+    line-height: 1.4;
+}
+
+.loading h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
 }
 
 .loading__author {
+    display: block;
     font-weight: normal;
     font-size: 0.9rem;
-    color: rgba(141, 141, 193, 1);
-    margin: 0.6rem 0 2rem 0;
-    display: block;
+    color: var(--muted);
+    margin: 0.625rem 0 2rem 0;
 }
 
 .loading__anim {
-    width: 35px;
-    height: 35px;
+    width: 2.625rem;
+    height: 2.625rem;
+
     display: inline-block;
+
     border: 5px solid rgba(7, 146, 243, 0.25);
-    border-left-color: rgba(10, 92, 169, 0.5);
-    border-top-color: rgba(10, 92, 169, 0.5);
+    border-left-color: var(--primary);
+    border-top-color: var(--primary);
+
     border-radius: 50%;
+    
     animation: rotate 600ms infinite linear;
 }
 
-@keyframes rotate {to {transform: rotate(1turn);}}
+@keyframes rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
