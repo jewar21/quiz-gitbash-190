@@ -43,10 +43,6 @@
 // let resultado = sumar(-5, -9);
 // console.log(resultado);
 
-// ------ PRIMER CONTACTO CON EL DOM -------
-// const titulo = document.querySelector(".hero h1");
-// console.log(titulo);
-
 // ------ LOADER -------
 const loader = document.querySelector("#loader");
 const website = document.querySelector("#website");
@@ -58,9 +54,9 @@ function showPage() {
     website.classList.add("show");
     // Habilitando la interacción con la web
     website.removeAttribute("inert");
-
+    
     console.log("Landing cargada correctamente");
-
+    
     setTimeout(() => {
         loader.remove();
     }, 700);
@@ -69,3 +65,17 @@ function showPage() {
 
 setTimeout(showPage, 3000);
 
+
+// ------ PRIMER CONTACTO CON EL DOM -------
+const titulo = document.querySelector(".hero h1");
+console.log(titulo);
+
+// titulo.textContent = "¡Estamos aprendiendo JavaScript!";
+
+const boton = document.querySelector("#change-message");
+
+function changeMessage() {
+    titulo.textContent = "¡Estamos aprendiendo JavaScript!";
+}
+
+boton.addEventListener("click", changeMessage);
